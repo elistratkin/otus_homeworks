@@ -6,7 +6,7 @@ chmod ugo+rw /var/nfs_share/
 mkdir /var/nfs_share/upload
 chmod ugo+rw /var/nfs_share/upload
 echo "/var/nfs_share/ *(rw)" >> /etc/exports
-sed -i "36s/^#//" /etc/nfs.conf
+sed -i "36s/# port=0/port=20048/" /etc/nfs.conf
 sed -i "s/# tcp/udp/" /etc/nfs.conf
 systemctl enable nfs-server
 systemctl start nfs-server
