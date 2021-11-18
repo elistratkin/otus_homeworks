@@ -1,0 +1,28 @@
+zpool create -f storage /dev/sdb
+for i in $(seq 1 5); do zfs create storage/data$i; done
+for i in $(seq 1 5); do zfs set compression=on storage/data$i; done
+zfs set compression=gzip storage/data1
+zfs set compression=gzip-5 storage/data2
+zfs set compression=zle storage/data3
+zfs set compression=lzjb storage/data4
+zfs set compression=lz4 storage/data5
+for i in $(seq 1 5); do cp -R /etc /storage/data$i; done
+zfs get compression,compressratio
+
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1KRBNW33QWqbvbVHa3hLJivOAt60yukkg' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1KRBNW33QWqbvbVHa3hLJivOAt60yukkg" -O zpool && rm -rf /tmp/cookies.txt
+tar -xvf zpool
+zpool import -d ${PWD}/zpoolexport/ otus
+zpool list
+zpool status
+zfs get all otus
+zfs get compression,compressratio otus
+zfs get recordsize otus
+zfs get checksum otus
+
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1gH8gCL9y7Nd5Ti3IRmplZPF1XjzxeRAG' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1gH8gCL9y7Nd5Ti3IRmplZPF1XjzxeRAG" -O otus_task2.file && rm -rf /tmp/cookies.txt
+cd /
+mkdir otus/task2
+zfs receive otus/task2 < ~/otus_task2.file
+find /otus/task2 -name "secret*"
+cat /otus/task2/task1/file_mess/secret_message
+
