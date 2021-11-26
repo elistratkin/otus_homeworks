@@ -1,6 +1,4 @@
-# otus_homeworks
-
-## В данном репозитории хранятся файлы с выполненными домашними заданиями по курсам, пройденным в компании <a href="http://otus.ru">otus</a>
+## В данном репозитории хранятся файлы с выполненными практическими заданиями по курсам, пройденным в компании <a href="http://otus.ru">otus</a>
 
 ## Курс Administrator Linux Pro
 1. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/Manual_kernel_update">Обновить ядро в базовой системе</a>
