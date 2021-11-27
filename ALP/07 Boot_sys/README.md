@@ -9,11 +9,11 @@
 
 **Попасть в систему без пароля несколькими способами.**<br>
 1. В графическом режиме останавливаем загрузку системы на этапе выбора ядра<br>
-![Останавливаем загрузку](https://github.com/elistratkin/otus_homeworks/tree/main/ALP/07%20Boot_sys/Screenshot_1.png)
+![Останавливаем загрузку](./Screenshot_1.png)
 2. Изменяем параметры загрузки, используя rd.break<br>
-![Изменяем параметры загрузки](https://github.com/elistratkin/otus_homeworks/tree/main/ALP/07%20Boot_sys/Screenshot_2.png)
+![Изменяем параметры загрузки](./Screenshot_2.png)
 3. Перемонтируем каталог sysroot в режим rw, изменим root пароль, перемонтируем обратно в ro и продолжим загрузку<br>
-![Меняем пароль](https://github.com/elistratkin/otus_homeworks/tree/main/ALP/07%20Boot_sys/Screenshot_2.png)
+![Меняем пароль](./Screenshot_2.png)
 4. После загрузки системы в качестве проверки авторизуемся под рутом с использованием нового пароля<br><br>
 
 **Установить систему с LVM, после чего переименовать VG**<br>
