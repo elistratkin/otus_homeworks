@@ -8,6 +8,7 @@
 5. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/NFS">Vagrant стенд для NFS</a>
 6. <a href="https://github.com/elistratkin/otus_homeworks">Размещаем свой RPM в своем репозитории</a>
 7. <a href="https://github.com/elistratkin/otus_homeworks">Работа с загрузчиком</a>
+8. <a href="https://github.com/elistratkin/otus_homeworks">Systemd</a>
 ## Курс Python Developer Basic
 
 ## Курс DevOps
