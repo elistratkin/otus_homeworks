@@ -1,0 +1,416 @@
+Script started on Sat 27 Nov 2021 04:36:55 PM UTC
+]0;root@lvm:~[?1034h[root@lvm ~]# vgs
+  VG         #PV #LV #SN Attr   VSize   VFree
+  VolGroup00   1   2   0 wz--n- <38.97g    0 
+]0;root@lvm:~[root@lvm ~]# vgrename VolGroup00 OtusRoot
+  Volume group "VolGroup00" successfully renamed to "OtusRoot"
+]0;root@lvm:~[root@lvm ~]# yum install -y nano
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos-mirror.rbc.ru
+ * extras: mirror.yandex.ru
+ * updates: centos-mirror.rbc.ru
+Resolving Dependencies
+--> Running transaction check
+---> Package nano.x86_64 0:2.3.1-10.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+========================================================================================================================
+ Package                  Arch                       Version                             Repository                Size
+========================================================================================================================
+Installing:
+ nano                     x86_64                     2.3.1-10.el7                        base                     440 k
+
+Transaction Summary
+========================================================================================================================
+Install  1 Package
+
+Total download size: 440 k
+Installed size: 1.6 M
+Downloading packages:
+nano-2.3.1-10.el7.x86_64.rpm                                                                     | 440 kB  00:00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : nano-2.3.1-10.el7.x86_64 [                                                                         ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [##                                                                       ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [#####                                                                    ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [########                                                                 ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [#########                                                                ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [##########                                                               ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [#############                                                            ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [################                                                         ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [##################                                                       ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [###################                                                      ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [#####################                                                    ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [#######################                                                  ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [########################                                                 ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [###########################                                              ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [############################                                             ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [##############################                                           ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [################################                                         ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [###################################                                      ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [#####################################                                    ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [######################################                                   ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [########################################                                 ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [##########################################                               ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [###########################################                              ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [############################################                             ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [#############################################                            ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [###############################################                          ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [#################################################                        ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [###################################################                      ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [#####################################################                    ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [######################################################                   ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [########################################################                 ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [#########################################################                ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [##########################################################               ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [###########################################################              ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [##############################################################           ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [###############################################################          ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [################################################################         ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [#################################################################        ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [##################################################################       ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [###################################################################      ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [#####################################################################    ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [######################################################################   ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [#######################################################################  ] 1/1  Installing : nano-2.3.1-10.el7.x86_64 [######################################################################## ] 1/1  Installing : nano-2.3.1-10.el7.x86_64                                                                             1/1 
+  Verifying  : nano-2.3.1-10.el7.x86_64                                                                             1/1 
+
+Installed:
+  nano.x86_64 0:2.3.1-10.el7                                                                                            
+
+Complete!
+]0;root@lvm:~[root@lvm ~]# nano /etc/[K[K[K[K[K[K[K[K[K[Kcat /etc/fstab
+
+#
+# /etc/fstab
+# Created by anaconda on Sat May 12 18:50:26 2018
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+/dev/mapper/VolGroup00-LogVol00 /                       xfs     defaults        0 0
+UUID=570897ca-e759-4c81-90cf-389da6eee4cc /boot                   xfs     defaults        0 0
+/dev/mapper/VolGroup00-LogVol01 swap                    swap    defaults        0 0
+#VAGRANT-BEGIN
+# The contents below are automatically generated by Vagrant. Do not modify.
+#VAGRANT-END
+]0;root@lvm:~[root@lvm ~]# nano /etc/fa[Kstab
+[?1049h[1;30r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1                           File: /etc/fstab                                                             [4;1H(B[m#[5d# /etc/fstab[6d# Created by anaconda on Sat May 12 18:50:26 2018[7d#[8d# Accessible filesystems, by reference, are maintained under '/dev/disk'[9d# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info[10d#[11d/dev/mapper/VolGroup00-LogVol00 /[11;57Hxfs     defaults[11;81H0 0[12dUUID=570897ca-e759-4c81-90cf-389da6eee4cc /boot[12;67Hxfs     defaults[12;91H0 0[13d/dev/mapper/VolGroup00-LogVol01 swap[13;57Hswap    defaults[13;81H0 0[14d#VAGRANT-BEGIN[15d# The contents below are automatically generated by Vagrant. Do not modify.[16d#VAGRANT-END[28;52H(B[0;7m[ Read 14 lines ][29d^G(B[m Get Help[29;21H(B[0;7m^O(B[m WriteOut[29;41H(B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text[29;101H(B[0;7m^C(B[m Cur Pos[30d(B[0;7m^X(B[m Exit[30;21H(B[0;7m^J(B[m Justify[30;41H(B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3d[4d[5d[6d[7d[8d[9d[10d[11d/dev/ma	per/[1;111H(B[0;7mModified[11;13H(B[m[1P[1P[1P[1P[1P[1P[28d[K[11;13H[1P[1P[1P[1PO-LogVol00 /[11;47H xfs     defaults[71G 0 0[11;14Ht-LogVol00 /[11;48H xfs     defaults[72G 0 0[11;15Hu-LogVol00 /[11;49H xfs     defaults	 0 0[11;16Hs-LogVol00 /[11;50H xfs     defaults	  0 0[11;17HR-LogVol00 /[11;51H xfs     defaults	   0 0[11;18Ho-LogVol00 /[11;52H xfs     defaults	    0 0[11;19Hoo-LogVol00 /[11;53H xfs     defaults[77G 0 0[11;20Ht-LogVol00 /[11;54H xfs     defaults[78G 0 0[11;21H[12d[13d[Z[1P[1P[1P[1P[1P[1P[1P[1P[1P[1PO-LogVol01 swap[13;47H swap    defaults[71G 0 0[13;14Ht-LogVol01 swap[13;48H swap    defaults[72G 0 0[13;15Hu-LogVol01 swap[13;49H swap    defaults	 0 0[13;16Hs-LogVol01 swap[13;50H swap    defaults	  0 0[13;17HR-LogVol01 swap[13;51H swap    defaults	   0 0[13;18Ho-LogVol01 swap[13;52H swap    defaults	    0 0[13;19Hoo-LogVol01 swap[13;53H swap    defaults[77G 0 0[13;20Ht-LogVol01 swap[13;54H swap    defaults[78G 0 0[13;21H[28d(B[0;7mFile Name to Write: /etc/fstab                                                                                          [29;21H(B[m          (B[0;7mM-D(B[m DOS Format        [29;61H(B[0;7mM-A(B[m Append  [29;81H          (B[0;7mM-B(B[m Backup File[K[30;2H(B[0;7mC(B[m Cancel[30;21H          (B[0;7mM-M(B[m Mac Format       [30;61H(B[0;7mM-P(B[m Prepend[K[28;31H[1;111H[39;49m(B[0;7m        [28;51H(B[m[1K (B[0;7m[ Wrote 14 lines ](B[m[K[29;21H(B[0;7m^O(B[m WriteOut         (B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text         (B[0;7m^C(B[m Cur Pos[30;2H(B[0;7mX(B[m Exit  [30;21H(B[0;7m^J(B[m Justify          (B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[13;21H[29d[J[30;120H[30;1H[?1049l[?1l>]0;root@lvm:~[root@lvm ~]# nano /etc/fstab[1Pcat[C[C[C[C[C[C[C[C[C[C[C
+
+#
+# /etc/fstab
+# Created by anaconda on Sat May 12 18:50:26 2018
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+/dev/mapper/OtusRoot-LogVol00 /                       xfs     defaults        0 0
+UUID=570897ca-e759-4c81-90cf-389da6eee4cc /boot                   xfs     defaults        0 0
+/dev/mapper/OtusRoot-LogVol01 swap                    swap    defaults        0 0
+#VAGRANT-BEGIN
+# The contents below are automatically generated by Vagrant. Do not modify.
+#VAGRANT-END
+]0;root@lvm:~[root@lvm ~]# nano [K[K[K[K[Kcat /etc/default/grub
+GRUB_TIMEOUT=1
+GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
+GRUB_DEFAULT=saved
+GRUB_DISABLE_SUBMENU=true
+GRUB_TERMINAL_OUTPUT="console"
+GRUB_CMDLINE_LINUX="no_timer_check console=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=VolGroup00/LogVol00 rd.lvm.lv=VolGroup00/LogVol01 rhgb quiet"
+GRUB_DISABLE_RECOVERY="true"
+]0;root@lvm:~[root@lvm ~]# cat /etc/default/grub[C[1P /etc/default/grub[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /etc/default/grub[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /etc/default/grub[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn /etc/default/grub[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca /etc/default/grub[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn /etc/default/grubi /etc/default/grub[1P /etc/default/grubo /etc/default/grub
+[?1049h[1;30r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1                         File: /etc/default/grub                                                        [3;1H(B[mGRUB_TIMEOUT=1[4dGRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"[5dGRUB_DEFAULT=saved[6dGRUB_DISABLE_SUBMENU=true[7dGRUB_TERMINAL_OUTPUT="console"[8dGRUB_CMDLINE_LINUX="no_timer_check console=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashk$[9;1HGRUB_DISABLE_RECOVERY="true"[28;53H(B[0;7m[ Read 7 lines ][29d^G(B[m Get Help[29;21H(B[0;7m^O(B[m WriteOut[29;41H(B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text[29;101H(B[0;7m^C(B[m Cur Pos[30d(B[0;7m^X(B[m Exit[30;21H(B[0;7m^J(B[m Justify[30;41H(B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3d[4d[5d[6d[7d[8dGRUB_CM	LINE_LI	UX="[28d[K[8;22Ho_	imer_ch	ck cons	le=tty0	con[Z[Z[1;111H(B[0;7mModified[8;36H(B[monsole=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashke[8;36Hnsole=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashker[8;36Hsole=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkern[8;36Hole=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkerne[8;36Hle=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel[8;36He=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=[8;36H=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=a[8;36Htty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=au[8;36Hty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=aut[8;36Hy0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto[8;36H0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto [8;36H console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto r[8;36Hconsole=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd[8;36Honsole=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.[8;36Hnsole=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.l[8;36Hsole=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lv[8;36Hole=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm[8;36Hle=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.[8;36He=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.l[8;36H=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv[8;36HttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=[8;36HtyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=V[8;36HyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=Vo[8;36HS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=Vol[8;36H0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=VolG[8;36H,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=VolGr[8;36H115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=VolGro[8;36H15200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=VolGrou[8;36H5200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=VolGroup[8;36H200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=VolGroup0[8;36H00n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=VolGroup0[8;36H0n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=VolGroup00/[8;36Hn8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=VolGroup00/L[8;36H8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=VolGroup00/Lo[8;36H net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=VolGroup00/Log[8;36Hnet.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=VolGroup00/LogV[8;36Hnet.	fnames=	 biosde	name=0 	levator	noop cr	shkerne	=auto r	.lvm.lv	olGroup00/LogVo[8;105HlGroup00/LogVol[8;105HGroup00/LogVol0[8;105Hroup00/LogVol0[8;105Houp00/LogVol00 [8;105Hup00/LogVol00 r[8;105Hp00/LogVol00 rd[8;105H00/LogVol00 rd.[8;105H0/LogVol00 rd.l[8;105H/LogVol00 rd.lv[8;105HO/LogVol00 rd.l[8;106Ht/LogVol00 rd.[8;107Hu/LogVol00 rd[8;108Hs/LogVol00 r[8;109HR/LogVol00 [8;110Ho/LogVol00[8;111Ho/LogVol[Zt/LogVol[Z/LogVo$LogVol00 rd.lvm.lv=VolGroup00/LogVol01 rhgb quiet"[K[8G	0 rd.lv	.lv=[1P[1P[1P[1P[1P[1P[1P[1P[1P[1PO/LogVol01 rhgb quiet"[8;22Ht/LogVol01 rhgb quiet"[8;23Hu/LogVol01 rhgb quiet"[8;24Hs/LogVol01 rhgb quiet"[8;25HR/LogVol01 rhgb quiet"[8;26Ho/LogVol01 rhgb quiet"[8;27Hoo/LogVol01 rhgb quiet"[8;28Ht/LogVol01 rhgb quiet"[8;29H[28d(B[0;7mFile Name to Write: /etc/default/grub                                                                                   [29;21H(B[m          (B[0;7mM-D(B[m DOS Format        [29;61H(B[0;7mM-A(B[m Append  [29;81H          (B[0;7mM-B(B[m Backup File[K[30;2H(B[0;7mC(B[m Cancel[30;21H          (B[0;7mM-M(B[m Mac Format       [30;61H(B[0;7mM-P(B[m Prepend[K[28;38H[1;111H[39;49m(B[0;7m        [28;51H(B[m[1K (B[0;7m[ Wrote 7 lines ](B[m[K[29;21H(B[0;7m^O(B[m WriteOut         (B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text         (B[0;7m^C(B[m Cur Pos[30;2H(B[0;7mX(B[m Exit  [30;21H(B[0;7m^J(B[m Justify          (B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[8;29H[29d[J[30;120H[30;1H[?1049l[?1l>]0;root@lvm:~[root@lvm ~]# nano /etc/default/grub[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pcat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+GRUB_TIMEOUT=1
+GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
+GRUB_DEFAULT=saved
+GRUB_DISABLE_SUBMENU=true
+GRUB_TERMINAL_OUTPUT="console"
+GRUB_CMDLINE_LINUX="no_timer_check net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=OtusRoot/LogVol00 rd.lvm.lv=OtusRoot/LogVol01 rhgb quiet"
+GRUB_DISABLE_RECOVERY="true"
+]0;root@lvm:~[root@lvm ~]# cat /boot/grub2/grub.cfg
+#
+# DO NOT EDIT THIS FILE
+#
+# It is automatically generated by grub2-mkconfig using templates
+# from /etc/grub.d and settings from /etc/default/grub
+#
+
+### BEGIN /etc/grub.d/00_header ###
+set pager=1
+
+if [ -s $prefix/grubenv ]; then
+  load_env
+fi
+if [ "${next_entry}" ] ; then
+   set default="${next_entry}"
+   set next_entry=
+   save_env next_entry
+   set boot_once=true
+else
+   set default="${saved_entry}"
+fi
+
+if [ x"${feature_menuentry_id}" = xy ]; then
+  menuentry_id_option="--id"
+else
+  menuentry_id_option=""
+fi
+
+export menuentry_id_option
+
+if [ "${prev_saved_entry}" ]; then
+  set saved_entry="${prev_saved_entry}"
+  save_env saved_entry
+  set prev_saved_entry=
+  save_env prev_saved_entry
+  set boot_once=true
+fi
+
+function savedefault {
+  if [ -z "${boot_once}" ]; then
+    saved_entry="${chosen}"
+    save_env saved_entry
+  fi
+}
+
+function load_video {
+  if [ x$feature_all_video_module = xy ]; then
+    insmod all_video
+  else
+    insmod efi_gop
+    insmod efi_uga
+    insmod ieee1275_fb
+    insmod vbe
+    insmod vga
+    insmod video_bochs
+    insmod video_cirrus
+  fi
+}
+
+terminal_output console
+if [ x$feature_timeout_style = xy ] ; then
+  set timeout_style=menu
+  set timeout=1
+# Fallback normal timeout code in case the timeout_style feature is
+# unavailable.
+else
+  set timeout=1
+fi
+### END /etc/grub.d/00_header ###
+
+### BEGIN /etc/grub.d/00_tuned ###
+set tuned_params=""
+set tuned_initrd=""
+### END /etc/grub.d/00_tuned ###
+
+### BEGIN /etc/grub.d/01_users ###
+if [ -f ${prefix}/user.cfg ]; then
+  source ${prefix}/user.cfg
+  if [ -n "${GRUB2_PASSWORD}" ]; then
+    set superusers="root"
+    export superusers
+    password_pbkdf2 root ${GRUB2_PASSWORD}
+  fi
+fi
+### END /etc/grub.d/01_users ###
+
+### BEGIN /etc/grub.d/10_linux ###
+menuentry 'CentOS Linux (3.10.0-862.2.3.el7.x86_64) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-3.10.0-862.2.3.el7.x86_64-advanced-b60e9498-0baa-4d9f-90aa-069048217fee' {
+	load_video
+	set gfxpayload=keep
+	insmod gzio
+	insmod part_msdos
+	insmod xfs
+	set root='hd0,msdos2'
+	if [ x$feature_platform_search_hint = xy ]; then
+	  search --no-floppy --fs-uuid --set=root --hint='hd0,msdos2'  570897ca-e759-4c81-90cf-389da6eee4cc
+	else
+	  search --no-floppy --fs-uuid --set=root 570897ca-e759-4c81-90cf-389da6eee4cc
+	fi
+	linux16 /vmlinuz-3.10.0-862.2.3.el7.x86_64 root=/dev/mapper/VolGroup00-LogVol00 ro no_timer_check console=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=VolGroup00/LogVol00 rd.lvm.lv=VolGroup00/LogVol01 rhgb quiet 
+	initrd16 /initramfs-3.10.0-862.2.3.el7.x86_64.img
+}
+if [ "x$default" = 'CentOS Linux (3.10.0-862.2.3.el7.x86_64) 7 (Core)' ]; then default='Advanced options for CentOS Linux>CentOS Linux (3.10.0-862.2.3.el7.x86_64) 7 (Core)'; fi;
+### END /etc/grub.d/10_linux ###
+
+### BEGIN /etc/grub.d/20_linux_xen ###
+### END /etc/grub.d/20_linux_xen ###
+
+### BEGIN /etc/grub.d/20_ppc_terminfo ###
+### END /etc/grub.d/20_ppc_terminfo ###
+
+### BEGIN /etc/grub.d/30_os-prober ###
+### END /etc/grub.d/30_os-prober ###
+
+### BEGIN /etc/grub.d/40_custom ###
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+### END /etc/grub.d/40_custom ###
+
+### BEGIN /etc/grub.d/41_custom ###
+if [ -f  ${config_directory}/custom.cfg ]; then
+  source ${config_directory}/custom.cfg
+elif [ -z "${config_directory}" -a -f  $prefix/custom.cfg ]; then
+  source $prefix/custom.cfg;
+fi
+### END /etc/grub.d/41_custom ###
+]0;root@lvm:~[root@lvm ~]# cat /boot/grub2/grub.cfg[1P /boot/grub2/grub.cfg[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /boot/grub2/grub.cfg[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /boot/grub2/grub.cfg[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn /boot/grub2/grub.cfg[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca /boot/grub2/grub.cfg[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn /boot/grub2/grub.cfg[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co /boot/grub2/grub.cfg[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[1;30r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1                        File: /boot/grub2/grub.cfg                                                      [3;1H(B[m#[4d# DO NOT EDIT THIS FILE[5d#[6d# It is automatically generated by grub2-mkconfig using templates[7d# from /etc/grub.d and settings from /etc/default/grub[8d#[10d### BEGIN /etc/grub.d/00_header ###[11dset pager=1[13dif [ -s $prefix/grubenv ]; then[14;3Hload_env[15dfi[16dif [ "${next_entry}" ] ; then[17;4Hset default="${next_entry}"[18;4Hset next_entry=[19;4Hsave_env next_entry[20;4Hset boot_once=true[21delse[22dset default="${saved_entry}"[23dfi[25dif [ x"${feature_menuentry_id}" = xy ]; then[26;3Hmenuentry_id_option="--id"[27delse[28;52H(B[0;7m[ Read 127 lines ][29d^G(B[m Get Help[29;21H(B[0;7m^O(B[m WriteOut[29;41H(B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text[29;101H(B[0;7m^C(B[m Cur Pos[30d(B[0;7m^X(B[m Exit[30;21H(B[0;7m^J(B[m Justify[30;41H(B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3d[4d[5d[28d(B[0;7mSearch:                                                                                                                 [29;22HY(B[m First Line[29;42H(B[0;7mT(B[m Go To Line[29;62H(B[0;7mW(B[m Beg of Par	(B[0;7mM-J(B[m FullJstify[101G(B[0;7mM-B(B[m Backwards[30;2H(B[0;7mC(B[m Cancel[30;22H(B[0;7mV(B[m Last Line[30;42H(B[0;7mR(B[m Replace [30;62H(B[0;7mO(B[m End of Par	(B[0;7mM-C(B[m Case Sens[101G(B[0;7mM-R(B[m Regexp[K[28;9H(B[0;7mV(B[m(B[0;7mo(B[m(B[0;7ml(B[m(B[0;7mG(B[m(B[0;7mr(B[m(B[0;7mo(B[m(B[0;7mu(B[m(B[0;7mp(B[m[3dmenuentry 'CentOS Linux (3.10.0-862.2.3.el7.x86_64) 7 (Core)' --class centos --class gnu-linux --class gnu --class os -$[4;8H[1K	load_video[K[5;8H[1K	set gfxpayload=keep[6;8H[1K	insmod gzio[K[7;8H[1K	insmod part_msdos[K[8;8H[1K	insmod xfs[9;9Hset root='hd0,msdos2'[10;8H[1K	if [ x$feature_platform_search_hint = xy ]; then[11;10H[1K search --no-floppy --fs-uuid --set=root --hint='hd0,msdos2'  570897ca-e759-4c81-90cf-389da6eee4cc[12;9Helse[13;10H[1K search --no-floppy --fs-uuid --set=root 570897ca-e759-4c81-90cf-389da6eee4cc[14;8H[1K	fi[15;8H[1K	linux16 /vmlinuz-3.10.0-862.2.3.el7.x86_64 root=/dev/mapper/VolGroup00-LogVol00 ro no_timer_check console=tty0 $[16;8H[1K	initrd16 /initramfs-3.10.0-862.2.3.el7.x86_64.img[17d}[K[18dif [ "x$default" = 'CentOS Linux (3.10.0-862.2.3.el7.x86_64) 7 (Core)' ]; then default='Advanced options for CentOS Lin$[19;1H### END /etc/grub.d/10_linux ###[20d[K[21d### BEGIN /etc/grub.d/20_linux_xen ###[22d### END /etc/grub.d/20_linux_xen ###[23d[K[24d### BEGIN /etc/grub.d/20_ppc_terminfo ###[25d### END /etc/grub.d/20_ppc_terminfo ###[K[26d[K[27d### BEGIN /etc/grub.d/30_os-prober ###[28d[K[29;22H(B[0;7mO(B[m WriteOut  [29;42H(B[0;7mR(B[m Read File [29;62H(B[0;7mY(B[m Prev Page 	(B[0;7m^K(B[m Cut Text   [101G(B[0;7m^C(B[m Cur Pos[K[30;2H(B[0;7mX(B[m Exit  [30;22H(B[0;7mJ(B[m Justify  [30;42H(B[0;7mW(B[m Where Is[30;62H(B[0;7mV(B[m Next Page 	(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[15;69H[1;111H(B[0;7mModified[15;69H(B[molGroup00-LogVol00 ro no_timer_check console=tty0 c[15;69HlGroup00-LogVol00 ro no_timer_check console=tty0 co[15;69HGroup00-LogVol00 ro no_timer_check console=tty0 con[15;69Hroup00-LogVol00 ro no_timer_check console=tty0 cons[15;69Houp00-LogVol00 ro no_timer_check console=tty0 conso[15;69Hup00-LogVol00 ro no_timer_check console=tty0 consol[15;69Hp00-LogVol00 ro no_timer_check console=tty0 console[15;69H00-LogVol00 ro no_timer_check console=tty0 console=[15;69H0-LogVol00 ro no_timer_check console=tty0 console=t[15;69H-LogVol00 ro no_timer_check console=tty0 console=t[15;69HO-LogVol00 ro no_timer_check console=tty0 console=[15;70Ht-LogVol00 ro no_timer_check console=tty0 console=[15;71Hu-LogVol00 ro no_timer_check console=tty0 console[15;72Hs-LogVol00 ro no_timer_check console=tty0 consol[15;73HR-LogVol00 ro no_timer_check console=tty0 conso[15;74Ho-LogVol00 ro no_timer_check console=tty0 cons[15;75Ho-LogVol00 ro no_timer_check console=tty0 con[15;76Ht-LogVol00 ro no_timer_check console=tty0 co[15;77H[28d(B[0;7mSearch [VolGroup]:                                                                                                      [29;22HY(B[m First Line[29;42H(B[0;7mT(B[m Go To Line[29;62H(B[0;7mW(B[m Beg of Par	(B[0;7mM-J(B[m FullJstify[101G(B[0;7mM-B(B[m Backwards[30;2H(B[0;7mC(B[m Cancel[30;22H(B[0;7mV(B[m Last Line[30;42H(B[0;7mR(B[m Replace [30;62H(B[0;7mO(B[m End of Par	(B[0;7mM-C(B[m Case Sens[101G(B[0;7mM-R(B[m Regexp[K[28;20H[15d$ty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=VolGroup00/LogVol00 rd[28d[K[29;22H(B[0;7mO(B[m WriteOut  [29;42H(B[0;7mR(B[m Read File [29;62H(B[0;7mY(B[m Prev Page 	(B[0;7m^K(B[m Cut Text   [101G(B[0;7m^C(B[m Cur Pos[K[30;2H(B[0;7mX(B[m Exit  [30;22H(B[0;7mJ(B[m Justify  [30;42H(B[0;7mW(B[m Where Is[30;62H(B[0;7mV(B[m Next Page 	(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[15;98HolGroup00/LogVol00 rd.[15;98HlGroup00/LogVol00 rd.l[15;98HGroup00/LogVol00 rd.lv[15;98Hroup00/LogVol00 rd.lvm[15;98Houp00/LogVol00 rd.lvm.[15;98Hup00/LogVol00 rd.lvm.l[15;98Hp00/LogVol00 rd.lvm.lv[15;98H00/LogVol00 rd.lvm.lv=[15;98H0/LogVol00 rd.lvm.lv=V[15;98H/LogVol00 rd.lvm.lv=Vo[15;98HO/LogVol00 rd.lvm.lv=V[15;99Ht/LogVol00 rd.lvm.lv=[15;100Hu/LogVol00 rd.lvm.lv[15;101Hs/LogVol00 rd.lvm.l[15;102HR/LogVol00 rd.lvm.[15;103Ho/LogVol00 rd.lvm[15;104Ho/LogVol00 rd.lv[15;105Ht/LogVol00 rd.l[15;106H[28d(B[0;7mSearch [VolGroup]:                                                                                                      [29;22HY(B[m First Line[29;42H(B[0;7mT(B[m Go To Line[29;62H(B[0;7mW(B[m Beg of Par	(B[0;7mM-J(B[m FullJstify[101G(B[0;7mM-B(B[m Backwards[30;2H(B[0;7mC(B[m Cancel[30;22H(B[0;7mV(B[m Last Line[30;42H(B[0;7mR(B[m Replace [30;62H(B[0;7mO(B[m End of Par	(B[0;7mM-C(B[m Case Sens[101G(B[0;7mM-R(B[m Regexp[K[28;20H[15d$0 rd.lvm.lv=VolGroup00/LogVol01 rhgb quiet[K[28d[K[29;22H(B[0;7mO(B[m WriteOut  [29;42H(B[0;7mR(B[m Read File [29;62H(B[0;7mY(B[m Prev Page 	(B[0;7m^K(B[m Cut Text   [101G(B[0;7m^C(B[m Cur Pos[K[30;2H(B[0;7mX(B[m Exit  [30;22H(B[0;7mJ(B[m Justify  [30;42H(B[0;7mW(B[m Where Is[30;62H(B[0;7mV(B[m Next Page 	(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[15;14H[1P[1P[1P[1P[1P[1P[1P[1P[1P[1PO/LogVol01 rhgb quiet[15;15Ht/LogVol01 rhgb quiet[15;16Hu/LogVol01 rhgb quiet[15;17Hs/LogVol01 rhgb quiet[15;18HR/LogVol01 rhgb quiet[15;19Ho/LogVol01 rhgb quiet[15;20Hoo/LogVol01 rhgb quiet[15;21Ht/LogVol01 rhgb quiet[15;22H[28d(B[0;7mSearch [VolGroup]:                                                                                                      [29;22HY(B[m First Line[29;42H(B[0;7mT(B[m Go To Line[29;62H(B[0;7mW(B[m Beg of Par	(B[0;7mM-J(B[m FullJstify[101G(B[0;7mM-B(B[m Backwards[30;2H(B[0;7mC(B[m Cancel[30;22H(B[0;7mV(B[m Last Line[30;42H(B[0;7mR(B[m Replace [30;62H(B[0;7mO(B[m End of Par	(B[0;7mM-C(B[m Case Sens[101G(B[0;7mM-R(B[m Regexp[K[28;20H[28;48H[1K	(B[0;7m[ "VolGroup" not found ](B[m[K[29;22H(B[0;7mO(B[m WriteOut  [29;42H(B[0;7mR(B[m Read File [29;62H(B[0;7mY(B[m Prev Page 	(B[0;7m^K(B[m Cut Text   [101G(B[0;7m^C(B[m Cur Pos[K[30;2H(B[0;7mX(B[m Exit  [30;22H(B[0;7mJ(B[m Justify  [30;42H(B[0;7mW(B[m Where Is[30;62H(B[0;7mV(B[m Next Page 	(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[15;22H[28d(B[0;7mFile Name to Write: /boot/grub2/grub.cfg                                                                                [29;21H(B[m          (B[0;7mM-D(B[m DOS Format        [29;61H(B[0;7mM-A(B[m Append  [29;81H          (B[0;7mM-B(B[m Backup File[K[30;2H(B[0;7mC(B[m Cancel[30;21H          (B[0;7mM-M(B[m Mac Format       [30;61H(B[0;7mM-P(B[m Prepend[K[28;41H[1;111H[39;49m(B[0;7m        [28;50H(B[m[1K (B[0;7m[ Wrote 127 lines ](B[m[K[29;21H(B[0;7m^O(B[m WriteOut         (B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text         (B[0;7m^C(B[m Cur Pos[30;2H(B[0;7mX(B[m Exit  [30;21H(B[0;7m^J(B[m Justify          (B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[15;22H[29d[J[30;120H[30;1H[?1049l[?1l>]0;root@lvm:~[root@lvm ~]# nano /boot/grub2/grub.cfg[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pcat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+#
+# DO NOT EDIT THIS FILE
+#
+# It is automatically generated by grub2-mkconfig using templates
+# from /etc/grub.d and settings from /etc/default/grub
+#
+
+### BEGIN /etc/grub.d/00_header ###
+set pager=1
+
+if [ -s $prefix/grubenv ]; then
+  load_env
+fi
+if [ "${next_entry}" ] ; then
+   set default="${next_entry}"
+   set next_entry=
+   save_env next_entry
+   set boot_once=true
+else
+   set default="${saved_entry}"
+fi
+
+if [ x"${feature_menuentry_id}" = xy ]; then
+  menuentry_id_option="--id"
+else
+  menuentry_id_option=""
+fi
+
+export menuentry_id_option
+
+if [ "${prev_saved_entry}" ]; then
+  set saved_entry="${prev_saved_entry}"
+  save_env saved_entry
+  set prev_saved_entry=
+  save_env prev_saved_entry
+  set boot_once=true
+fi
+
+function savedefault {
+  if [ -z "${boot_once}" ]; then
+    saved_entry="${chosen}"
+    save_env saved_entry
+  fi
+}
+
+function load_video {
+  if [ x$feature_all_video_module = xy ]; then
+    insmod all_video
+  else
+    insmod efi_gop
+    insmod efi_uga
+    insmod ieee1275_fb
+    insmod vbe
+    insmod vga
+    insmod video_bochs
+    insmod video_cirrus
+  fi
+}
+
+terminal_output console
+if [ x$feature_timeout_style = xy ] ; then
+  set timeout_style=menu
+  set timeout=1
+# Fallback normal timeout code in case the timeout_style feature is
+# unavailable.
+else
+  set timeout=1
+fi
+### END /etc/grub.d/00_header ###
+
+### BEGIN /etc/grub.d/00_tuned ###
+set tuned_params=""
+set tuned_initrd=""
+### END /etc/grub.d/00_tuned ###
+
+### BEGIN /etc/grub.d/01_users ###
+if [ -f ${prefix}/user.cfg ]; then
+  source ${prefix}/user.cfg
+  if [ -n "${GRUB2_PASSWORD}" ]; then
+    set superusers="root"
+    export superusers
+    password_pbkdf2 root ${GRUB2_PASSWORD}
+  fi
+fi
+### END /etc/grub.d/01_users ###
+
+### BEGIN /etc/grub.d/10_linux ###
+menuentry 'CentOS Linux (3.10.0-862.2.3.el7.x86_64) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-3.10.0-862.2.3.el7.x86_64-advanced-b60e9498-0baa-4d9f-90aa-069048217fee' {
+	load_video
+	set gfxpayload=keep
+	insmod gzio
+	insmod part_msdos
+	insmod xfs
+	set root='hd0,msdos2'
+	if [ x$feature_platform_search_hint = xy ]; then
+	  search --no-floppy --fs-uuid --set=root --hint='hd0,msdos2'  570897ca-e759-4c81-90cf-389da6eee4cc
+	else
+	  search --no-floppy --fs-uuid --set=root 570897ca-e759-4c81-90cf-389da6eee4cc
+	fi
+	linux16 /vmlinuz-3.10.0-862.2.3.el7.x86_64 root=/dev/mapper/OtusRoot-LogVol00 ro no_timer_check console=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop crashkernel=auto rd.lvm.lv=OtusRoot/LogVol00 rd.lvm.lv=OtusRoot/LogVol01 rhgb quiet 
+	initrd16 /initramfs-3.10.0-862.2.3.el7.x86_64.img
+}
+if [ "x$default" = 'CentOS Linux (3.10.0-862.2.3.el7.x86_64) 7 (Core)' ]; then default='Advanced options for CentOS Linux>CentOS Linux (3.10.0-862.2.3.el7.x86_64) 7 (Core)'; fi;
+### END /etc/grub.d/10_linux ###
+
+### BEGIN /etc/grub.d/20_linux_xen ###
+### END /etc/grub.d/20_linux_xen ###
+
+### BEGIN /etc/grub.d/20_ppc_terminfo ###
+### END /etc/grub.d/20_ppc_terminfo ###
+
+### BEGIN /etc/grub.d/30_os-prober ###
+### END /etc/grub.d/30_os-prober ###
+
+### BEGIN /etc/grub.d/40_custom ###
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+### END /etc/grub.d/40_custom ###
+
+### BEGIN /etc/grub.d/41_custom ###
+if [ -f  ${config_directory}/custom.cfg ]; then
+  source ${config_directory}/custom.cfg
+elif [ -z "${config_directory}" -a -f  $prefix/custom.cfg ]; then
+  source $prefix/custom.cfg;
+fi
+### END /etc/grub.d/41_custom ###
+]0;root@lvm:~[root@lvm ~]# mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)
+Executing: /sbin/dracut -f -v /boot/initramfs-3.10.0-862.2.3.el7.x86_64.img 3.10.0-862.2.3.el7.x86_64
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+*** Including module: bash ***
+*** Including module: nss-softokn ***
+*** Including module: i18n ***
+*** Including module: drm ***
+*** Including module: plymouth ***
+*** Including module: dm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 60-persistent-storage-dm.rules
+Skipping udev rule: 55-dm.rules
+*** Including module: kernel-modules ***
+Omitting driver floppy
+*** Including module: lvm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 56-lvm.rules
+Skipping udev rule: 60-persistent-storage-lvm.rules
+*** Including module: qemu ***
+*** Including module: resume ***
+*** Including module: rootfs-block ***
+*** Including module: terminfo ***
+*** Including module: udev-rules ***
+Skipping udev rule: 40-redhat-cpu-hotplug.rules
+Skipping udev rule: 91-permissions.rules
+*** Including module: biosdevname ***
+*** Including module: systemd ***
+*** Including module: usrmount ***
+*** Including module: base ***
+*** Including module: fs-lib ***
+*** Including module: shutdown ***
+*** Including modules done ***
+*** Installing kernel module dependencies and firmware ***
+*** Installing kernel module dependencies and firmware done ***
+*** Resolving executable dependencies ***
+*** Resolving executable dependencies done***
+*** Hardlinking files ***
+*** Hardlinking files done ***
+*** Stripping files ***
+*** Stripping files done ***
+*** Generating early-microcode cpio image contents ***
+*** No early-microcode cpio image needed ***
+*** Store current command line parameters ***
+*** Creating image file ***
+*** Creating image file done ***
+*** Creating initramfs image file '/boot/initramfs-3.10.0-862.2.3.el7.x86_64.img' done ***
+]0;root@lvm:~[root@lvm ~]# exit
+exit
+
+Script done on Sat 27 Nov 2021 04:41:39 PM UTC
+Script started on Sat 27 Nov 2021 04:43:46 PM UTC
+]0;root@lvm:~[?1034h[root@lvm ~]# vgs
+  VG       #PV #LV #SN Attr   VSize   VFree
+  OtusRoot   1   2   0 wz--n- <38.97g    0 
+]0;root@lvm:~[root@lvm ~]# exit
+exit
+
+Script done on Sat 27 Nov 2021 04:43:53 PM UTC

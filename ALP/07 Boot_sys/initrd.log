@@ -1,0 +1,101 @@
+Script started on Sat 27 Nov 2021 04:46:23 PM UTC
+]0;root@lvm:~[?1034h[root@lvm ~]# mkdir /usr/lib/dracut/modules.d/01test
+]0;root@lvm:~[root@lvm ~]# mkdir /usr/lib/dracut/modules.d/01test[1P /usr/lib/dracut/modules.d/01test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /usr/lib/dracut/modules.d/01test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /usr/lib/dracut/modules.d/01test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /usr/lib/dracut/modules.d/01test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /usr/lib/dracut/modules.d/01test[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn /usr/lib/dracut/modules.d/01test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca /usr/lib/dracut/modules.d/01test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn /usr/lib/dracut/modules.d/01test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co /usr/lib/dracut/modules.d/01test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/module-setup.sh
+[?1049h[1;30r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1              File: /usr/lib/dracut/modules.d/01test/module-setup.sh                                    [28;55H[ New File ][29d^G(B[m Get Help[29;21H(B[0;7m^O(B[m WriteOut[29;41H(B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text[29;101H(B[0;7m^C(B[m Cur Pos[30d(B[0;7m^X(B[m Exit[30;21H(B[0;7m^J(B[m Justify[30;41H(B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3d[1;111H(B[0;7mModified[3d(B[m#!/bin/bash[5dcheck() {[6;5Hreturn 0[7d}[9ddepends() {[10;5Hreturn 0[11d}[13dinstall() {[14;5Hinst_hook cleanup 00 "${moddir}/test.sh"[15d}[28d[K[15d}[28d(B[0;7mFile Name to Write: /usr/lib/dracut/modules.d/01test/module-setup.sh                                                    [29;21H(B[m          (B[0;7mM-D(B[m DOS Format        [29;61H(B[0;7mM-A(B[m Append  [29;81H          (B[0;7mM-B(B[m Backup File[K[30;2H(B[0;7mC(B[m Cancel[30;21H          (B[0;7mM-M(B[m Mac Format       [30;61H(B[0;7mM-P(B[m Prepend[K[28;69H[1;111H[39;49m(B[0;7m        [28;51H(B[m[1K (B[0;7m[ Wrote 13 lines ](B[m[K[29;21H(B[0;7m^O(B[m WriteOut         (B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text         (B[0;7m^C(B[m Cur Pos[30;2H(B[0;7mX(B[m Exit  [30;21H(B[0;7m^J(B[m Justify          (B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[15d}[29d[J[30;120H[30;1H[?1049l[?1l>]0;root@lvm:~[root@lvm ~]# nano /usr/lib/dracut/modules.d/01test/module-setup.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P /usr/lib/dracut/modules.d/01test/module-setup.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[Cc /usr/lib/dracut/modules.d/01test/module-setup.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca /usr/lib/dracut/modules.d/01test/module-setup.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct /usr/lib/dracut/modules.d/01test/module-setup.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+#!/bin/bash
+
+check() {
+    return 0
+}
+
+depends() {
+    return 0
+}
+
+install() {
+    inst_hook cleanup 00 "${moddir}/test.sh"
+}
+]0;root@lvm:~[root@lvm ~]# cat /usr/lib/dracut/modules.d/01test/module-setup.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@nano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.sh[1P.sh[1P.sh[1P.sh[1P.sh[1P.sh[1P.sh[1P.sh[1P.sh[1P.sh[1P.sh[1P.sht.she.shs.sht.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[1;30r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1                 File: /usr/lib/dracut/modules.d/01test/test.sh                                         [28;55H[ New File ][29d^G(B[m Get Help[29;21H(B[0;7m^O(B[m WriteOut[29;41H(B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text[29;101H(B[0;7m^C(B[m Cur Pos[30d(B[0;7m^X(B[m Exit[30;21H(B[0;7m^J(B[m Justify[30;41H(B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[3d[1;111H(B[0;7mModified[3d(B[m#!/bin/bash[5dexec 0<>/dev/console 1<>/dev/console 2<>/dev/console[6dcat <<'msgend'[7dHello! You are in dracut module![8d ___________________[9d< I'm dracut module >[10d -------------------[11;4H\[12d\[13d	.--.[14;8H|o_o |[15;8H|:_/ |[16;7H//   \ \[17;6H(|     | )[18;5H/'\_   _/`\[19;5H\___)=(___/[20dmsgend[21dsleep 10[22decho " continuing...."[28d[K[22;23H[21;9H[A[19;16H[A[A[A[A[A[A[12;6H     \      \[7G \[8G \	[A    \     \      \[7G \[12d[13d[14d[15d[16d[17d[18d[A[A[A[A[A[A[A[A[A	acut mo	ule >[K >[K[Z >[K[Z >[K[Z >[K >[K>[K >[K >[K >[K	 >[K	 >[K[Z >[K>[K >[K >[K >[Ko >t >u >s >_ >[Zh >	o >m >e >w >o >r >k >[Z_ >[Ze >l >i >s >t >r >a >[Zt >[Zk >i >n >[28d(B[0;7mFile Name to Write: /usr/lib/dracut/modules.d/01test/test.sh                                                            [29;21H(B[m          (B[0;7mM-D(B[m DOS Format        [29;61H(B[0;7mM-A(B[m Append  [29;81H          (B[0;7mM-B(B[m Backup File[K[30;2H(B[0;7mC(B[m Cancel[30;21H          (B[0;7mM-M(B[m Mac Format       [30;61H(B[0;7mM-P(B[m Prepend[K[28;61H[1;111H[39;49m(B[0;7m        [28;51H(B[m[1K (B[0;7m[ Wrote 20 lines ](B[m[K[29;21H(B[0;7m^O(B[m WriteOut         (B[0;7m^R(B[m Read File[29;61H(B[0;7m^Y(B[m Prev Page[29;81H(B[0;7m^K(B[m Cut Text         (B[0;7m^C(B[m Cur Pos[30;2H(B[0;7mX(B[m Exit  [30;21H(B[0;7m^J(B[m Justify          (B[0;7m^W(B[m Where Is[30;61H(B[0;7m^V(B[m Next Page[30;81H(B[0;7m^U(B[m UnCut Text[101G(B[0;7m^T(B[m To Spell[9;28H[29d[J[30;120H[30;1H[?1049l[?1l>]0;root@lvm:~[root@lvm ~]# nano /usr/lib/dracut/modules.d/01test/test.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P /usr/lib/dracut/modules.d/01test/test.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[Cc /usr/lib/dracut/modules.d/01test/test.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca /usr/lib/dracut/modules.d/01test/test.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct /usr/lib/dracut/modules.d/01test/test.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+#!/bin/bash
+
+exec 0<>/dev/console 1<>/dev/console 2<>/dev/console
+cat <<'msgend'
+Hello! You are in dracut module!
+ ___________________
+< otus_homework_elistratkin >
+ -------------------
+       \
+        \
+        .--.
+       |o_o |
+       |:_/ |
+      //   \ \
+     (|     | )
+    /'\_   _/`\
+    \___)=(___/
+msgend
+sleep 10
+echo " continuing...."
+]0;root@lvm:~[root@lvm ~]# mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)
+Executing: /sbin/dracut -f -v /boot/initramfs-3.10.0-862.2.3.el7.x86_64.img 3.10.0-862.2.3.el7.x86_64
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+*** Including module: bash ***
+*** Including module: test ***
+*** Including module: nss-softokn ***
+*** Including module: i18n ***
+*** Including module: drm ***
+*** Including module: plymouth ***
+*** Including module: dm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 60-persistent-storage-dm.rules
+Skipping udev rule: 55-dm.rules
+*** Including module: kernel-modules ***
+Omitting driver floppy
+*** Including module: lvm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 56-lvm.rules
+Skipping udev rule: 60-persistent-storage-lvm.rules
+*** Including module: qemu ***
+*** Including module: resume ***
+*** Including module: rootfs-block ***
+*** Including module: terminfo ***
+*** Including module: udev-rules ***
+Skipping udev rule: 40-redhat-cpu-hotplug.rules
+Skipping udev rule: 91-permissions.rules
+*** Including module: biosdevname ***
+*** Including module: systemd ***
+*** Including module: usrmount ***
+*** Including module: base ***
+*** Including module: fs-lib ***
+*** Including module: shutdown ***
+*** Including modules done ***
+*** Installing kernel module dependencies and firmware ***
+*** Installing kernel module dependencies and firmware done ***
+*** Resolving executable dependencies ***
+*** Resolving executable dependencies done***
+*** Hardlinking files ***
+*** Hardlinking files done ***
+*** Stripping files ***
+*** Stripping files done ***
+*** Generating early-microcode cpio image contents ***
+*** No early-microcode cpio image needed ***
+*** Store current command line parameters ***
+*** Creating image file ***
+*** Creating image file done ***
+*** Creating initramfs image file '/boot/initramfs-3.10.0-862.2.3.el7.x86_64.img' done ***
+]0;root@lvm:~[root@lvm ~]# lsinitrd -m /boot/initramfs-$(uname -r).img | grep test
+[01;31m[Ktest[m[K
+]0;root@lvm:~[root@lvm ~]# учше[K[K[K[Kexit
+exit
+
+Script done on Sat 27 Nov 2021 04:49:09 PM UTC
