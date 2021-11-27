@@ -21,6 +21,6 @@
   
 **Результат:**<br>
   В каталоге репозитория содержится
-  <li> <a href="https://github.com/elistratkin/otus_homeworks/blob/main/ALP/ZFS/Vagrantfile">vagrantfile</a> с машиной, в которой провижином устанавливаются пакеты для работы с zfs;</li>
-  <li> набор <a href="https://github.com/elistratkin/otus_homeworks/blob/main/ALP/ZFS/result.txt">команд</a> для выполнения каждой из поставленных задач;</li>
-  <li> <a href="https://github.com/elistratkin/otus_homeworks/blob/main/ALP/ZFS/otus_zfs.log">лог</a> выполнения задач, записанный через scripts</li>
+  <li> <a href="./Vagrantfile">vagrantfile</a> с машиной, в которой провижином устанавливаются пакеты для работы с zfs;</li>
+  <li> набор <a href="./result.txt">команд</a> для выполнения каждой из поставленных задач;</li>
+  <li> <a href="./otus_zfs.log">лог</a> выполнения задач, записанный через scripts</li>
