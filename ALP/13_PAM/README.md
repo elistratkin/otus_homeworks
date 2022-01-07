@@ -24,4 +24,11 @@ fi
 Теперь подключим выполнение данного скрипта в PAM, добавив в /etc/pam.d/sshd строку <br>
 <em><strong> account    required     pam_exec.so /usr/local/bin/test_login.sh </strong></em>
      <br><br>
-2. Дать конкретному пользователю права работать с докером и возможность рестартить докер сервис
+2. Дать конкретному пользователю права работать с докером и возможность рестартить докер сервис<br><br>
+Для выполнения поставленной задачи воспользуемся возможностями PolKit. Добавим новое правило /etc/polkit-1/rules.d/01-polkit.rules со следующим содержимым <br><br>
+
+> polkit.addRule(function(action, subject) { <br>
+>  if (action.id == "org.freedesktop.systemd1.manage-units" && <br>
+>  action.lookup("unit") == "docker.service" && <br>
+>  subject.user === "какой-то там user") <br>
+>  {return polkit.Result.YES;}});<br>
