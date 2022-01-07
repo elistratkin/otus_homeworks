@@ -13,7 +13,7 @@
 10. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Работаем с процессами</a>
 11. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Первые шаги с Ansible</a>
 12. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Практика с SELinux</a>
-13. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/13_PAM/README.md">PAM</a>
+13. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/13_PAM">PAM</a>
 14. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Docker, docker-compose, dockerfile</a>
 15. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Настройка мониторинга</a>
 16. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Настраиваем центральный сервер для сбора логов</a>
