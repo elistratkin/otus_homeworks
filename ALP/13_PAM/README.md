@@ -8,16 +8,14 @@
 Для выполнения поставленной задачи напишем скрипт /usr/local/bin/test_login.sh для модуля pam-exec, который будет проверять день недели и принадлежность пользователя группе admin, если это выходной день.
 ```bash
 #!/bin/bash
-if [[ " `date +%u` " > " 5 " ]]
- then
-   if [ `grep "admin.*$(echo $PAM_USER)" /etc/group` ]
-    then
-     exit 0
-    else
-     exit 1
-   fi
+if id $PAM_USER | grep -w "admin" ; then
+  exit 0
 else
- exit 0
+  if [ $(date +%u) > "5" ] ; then
+    exit 1
+  else
+    exit 0
+  fi
 fi
 ```
 <br>
