@@ -1,0 +1,58 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+config.vm.define "main.ansible" do |server|
+  config.vm.box = 'centos/7'
+  server.vm.host_name = 'main.ansible'
+  server.vm.network :private_network, ip: "192.168.11.100"
+
+  server.vm.provider "virtualbox" do |vb|
+    vb.memory = "1024"
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+  end
+
+  server.vm.provision "shell", inline: <<-SHELL
+			mkdir -p ~root/.ssh
+			cp ~vagrant/.ssh/auth* ~root/.ssh
+			echo "Install Ansible"
+            yum install -y epel-release
+			yum install -y ansible
+			echo "Copy ansible projects"
+			mv /etc/ansible/ansible.cfg /etc/ansible/ansible.cfg.default
+			cp /vagrant/ansible.cfg /etc/ansible/ansible.cfg
+			mkdir /etc/ansible/inventories
+			mkdir /etc/ansible/playbooks
+			mkdir /etc/ansible/roles
+			cp -r /vagrant/inventories/* /etc/ansible/inventories/
+			cp -r /vagrant/playbooks/* /etc/ansible/playbooks/
+			cp -r /vagrant/roles/* /etc/ansible/roles/
+			echo "Provision on main.ansible done!"
+          SHELL
+  end
+
+  config.vm.define "nginx.client" do |client|
+    client.vm.box = 'centos/7'
+    client.vm.host_name = 'nginx.client'
+    client.vm.network :private_network, ip: "192.168.11.101"
+    client.vm.provider :virtualbox do |vb|
+      vb.memory = "1024"
+      vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    end
+	
+	client.vm.provision "shell", inline: <<-SHELL
+			mkdir -p ~root/.ssh
+			cp ~vagrant/.ssh/auth* ~root/.ssh
+			echo "Install yum-utils"
+			yum install -y yum-utils
+			echo "Config sshd"
+            sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+            systemctl restart sshd
+			echo "Provision on nginx.client done!"
+          SHELL
+	
+  end
+
+end
+

@@ -1,0 +1,53 @@
+---
+- name: Install epel repository
+  yum:
+    name: epel-release
+    state: present
+  
+- name: Install nginx package
+  yum:
+    name: nginx
+    state: latest
+
+- name: Update nginx config
+  template:
+    src: templates/nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+  notify:
+   - Reload nginx
+   
+- name: Create site folder
+  become: true
+  file:
+    path: /opt/www
+    state: directory
+    owner: root
+    mode: 0777
+    
+- name: Copy index.html
+  become: true
+  copy:
+    src: index.html
+    dest: /opt/www/index.html
+    owner: root
+    group: root
+    mode: '0777'
+  notify:
+   - Reload nginx
+
+- name: Create symlink for nginx
+  file: 
+    dest: "/etc/systemd/system/nginx.service"
+    src: "/lib/systemd/system/nginx.service"
+    state: link 
+    force: yes
+  notify: 
+    - Restart nginx
+
+- name: Enable nginx
+  systemd:
+    name: nginx
+    enabled: yes
+    masked: no
+
+...

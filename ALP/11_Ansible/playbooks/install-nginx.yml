@@ -1,0 +1,8 @@
+---
+- name: Install nginx on 8080 port
+  hosts: nginx
+  become: yes
+
+  roles:
+  - install-nginx
+...
