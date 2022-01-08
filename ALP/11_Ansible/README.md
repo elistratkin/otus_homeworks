@@ -13,4 +13,5 @@
 <li>main.ansible - машина с установленным ansible и каталогом проекта</li><br>
 <li>nginx.client - машина, на которую с использованием ansible будет развертываться nginx</li> <br><br>
 
-Развертывание nginx организовано через Ansible роль install-nginx. Написанная роль во время провижина в vagrant перебрасывается на main.ansible для его дальнейшего развертывания. Список машин для развертывания задается в <em> inventories/staging </em>. Для конфигурирования nginx.client требуется на машине с проектом ansible выполнить команду <br><strong> ansible-playbook /etc/ansible/playbooks/install-nginx.yml </strong>
+Развертывание nginx организовано через Ansible роль install-nginx. Написанная роль во время провижина в vagrant перебрасывается на main.ansible для его дальнейшего развертывания. Список машин для развертывания задается в <em> inventories/staging </em>. Для конфигурирования nginx.client требуется на машине main.ansible в каталоге с проектом /etc/ansible выполнить команду
+<br><strong> ansible-playbook playbooks/install-nginx.yml </strong>
