@@ -7,3 +7,10 @@
 <li> после установки nginx должен быть в режиме enabled в systemd;</li>
 <li> должен быть использован notify для старта nginx после установки;</li>
 <li> сайт должен слушать на нестандартном порту - 8080, для этого использовать переменные в Ansible.</li><br>
+
+**Решение** <br>
+Тестовый стенд представляет из себя две машины на базе centos 7:<br>
+<li>main.ansible - машина с установленным ansible и каталогом проекта</li><br>
+<li>nginx.client - машина, на которую с использованием ansible будет развертываться nginx</li> <br><br>
+
+Развертывание nginx организовано через Ansible роль install-nginx. Написанная роль во время провижина в vagrant перебрасывается на main.ansible для его дальнейшего развертывания. Список машин для развертывания задается в <em> inventories/staging </em>. Для конфигурирования nginx.client требуется на машине с проектом ansible выполнить команду <br><strong> ansible-playbook /etc/ansible/playbooks/install-nginx.yml </strong>
