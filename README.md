@@ -9,7 +9,7 @@
 6. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/06%20RPM_Repo">Размещаем свой RPM в своем репозитории</a>
 7. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/07%20Boot_sys">Работа с загрузчиком</a>
 8. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/08%20Systemd">Systemd</a>
-9. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Пишем скрипт Bash</a>
+9. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/09_Bash">Пишем скрипт Bash</a>
 10. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Работаем с процессами</a>
 11. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/11_Ansible">Первые шаги с Ansible</a>
 12. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Практика с SELinux</a>
