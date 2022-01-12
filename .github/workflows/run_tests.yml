@@ -37,7 +37,7 @@ jobs:
         pip install flake8 pytest Faker requests pytest-asyncio
     - name: Install inner (homework-level) dependencies
       run: |
-        for d in homework_* ; do
+        for d in PyDev/homework_* ; do
           HW_REQUIREMENTS_PATH="$d/requirements.txt"
             if [ -f "$HW_REQUIREMENTS_PATH" ];
             then
