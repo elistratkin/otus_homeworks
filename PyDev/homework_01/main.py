@@ -29,5 +29,5 @@ def filter_numbers(my_list, fil):
     if fil == EVEN:
         res = list(filter(lambda x: x % 2 == 0, my_list))
     if fil == PRIME:
-        res = list(filter(lambda x: is_prime(x), my_list))
+        res = list(filter(is_prime, my_list))
     return res
