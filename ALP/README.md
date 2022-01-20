@@ -10,7 +10,7 @@
 9. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/09_Bash">Пишем скрипт Bash</a>
 10. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Работаем с процессами</a>
 11. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/11_Ansible">Первые шаги с Ansible</a>
-12. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Практика с SELinux</a>
+12. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/12_SELinux">Практика с SELinux</a>
 13. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/13_PAM">PAM</a>
 14. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Docker, docker-compose, dockerfile</a>
 15. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Настройка мониторинга</a>
