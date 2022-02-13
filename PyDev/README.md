@@ -1,6 +1,6 @@
 ## Курс Python Developer Basic
 1. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/PyDev/homework_01">Публикация репозитория и работа с функциями</a>
-2. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/PyDev/">Классы и модули</a>
+2. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/PyDev/homework_02">Классы и модули</a>
 3. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/PyDev/">Docker контейнер c веб-приложением</a>
 4. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/PyDev/">Асинхронная работа с сетью и БД</a>
 5. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/PyDev/">Веб-приложение на Flask</a>
