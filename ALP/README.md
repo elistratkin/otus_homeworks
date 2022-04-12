@@ -13,8 +13,8 @@
 12. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/12_SELinux">Практика с SELinux</a>
 13. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/13_PAM">PAM</a>
 14. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/14_Docker">Docker, docker-compose, dockerfile</a>
-15. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Настройка мониторинга</a>
-16. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Настраиваем центральный сервер для сбора логов</a>
+15. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/15_Monitoring">Настройка мониторинга</a>
+16. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/15_Logging">Настраиваем центральный сервер для сбора логов</a>
 17. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Настраиваем бекапы</a>
 18. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Разворачиваем сетевую лабораторию</a>
 19. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Настройка PXE сервера для автоматической установки</a>
