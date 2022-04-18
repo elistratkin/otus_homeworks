@@ -1,0 +1,116 @@
+---
+- name: Configure web host
+  hosts: web
+  become: yes
+  vars:
+    nginx_port: 80
+
+  tasks:
+  - name: Install auditd package
+    apt:
+      pkg:
+        - auditd
+        - audispd-plugins
+      state: latest
+      update_cache: yes
+  - name: Copy audit conf
+    become: true
+    copy:
+      src: files/auditd.conf
+      dest: /etc/audit/auditd.conf
+      owner: root
+      group: root
+      mode: '0640'
+    notify:
+     - Restart audit
+  - name: Copy au-remote
+    become: true
+    copy:
+      src: files/au-remote.conf
+      dest: /etc/audisp/plugins.d/au-remote.conf
+      owner: root
+      group: root
+      mode: '0640'
+    notify:
+     - Restart audit
+  - name: Copy audisp-remote
+    become: true
+    copy:
+      src: files/audisp-remote.conf
+      dest: /etc/audisp/audisp-remote.conf
+      owner: root
+      group: root
+      mode: '0640'
+    notify:
+     - Restart audit
+  - name: Copy audit rules
+    become: true
+    copy:
+      src: files/audit.rules
+      dest: /etc/audit/rules.d/audit.rules
+      owner: root
+      group: root
+      mode: '0640'
+    notify:
+     - Restart audit
+
+  - name: Install nginx package
+    apt:
+      name: nginx
+      state: latest
+
+  - name: Update nginx config
+    template:
+      src: templates/nginx.conf.j2
+      dest: /etc/nginx/nginx.conf
+    notify:
+     - Reload nginx
+
+  - name: Create site folder
+    become: true
+    file:
+      path: /opt/www
+      state: directory
+      owner: root
+      mode: 0777
+
+  - name: Copy index.html
+    become: true
+    copy:
+      src: files/index.html
+      dest: /opt/www/index.html
+      owner: root
+      group: root
+      mode: '0777'
+    notify:
+     - Reload nginx
+
+  - name: Create symlink for nginx
+    file:
+      dest: "/etc/systemd/system/nginx.service"
+      src: "/lib/systemd/system/nginx.service"
+      state: link
+      force: yes
+    notify:
+      - Restart nginx
+
+  - name: Enable nginx
+    systemd:
+      name: nginx
+      enabled: yes
+      masked: no
+
+  handlers:
+    - name: Restart nginx
+      service:
+         name: nginx
+         state: restarted
+    - name: Restart audit
+      service:
+         name: auditd
+         state: restarted
+    - name: Reload nginx
+      service:
+         name: nginx
+         state: reloaded
+...

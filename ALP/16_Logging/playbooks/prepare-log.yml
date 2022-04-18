@@ -1,0 +1,43 @@
+---
+- name: Configure log host
+  hosts: log
+  become: yes
+
+  tasks:
+  - name: Copy rsyslog.conf
+    become: true
+    copy:
+      src: files/rsyslog.conf
+      dest: /etc/rsyslog.conf
+      owner: root
+      group: root
+      mode: '0640'
+    notify:
+      - Restart rsyslog
+  - name: Install auditd package
+    apt:
+      name:
+        - auditd
+      state: latest
+  - name: Copy audit conf
+    become: true
+    copy:
+      src: files/auditd-serv.conf
+      dest: /etc/audit/auditd.conf
+      owner: root
+      group: root
+      mode: '0640'
+    notify:
+     - Restart audit
+
+  handlers:
+    - name: Restart rsyslog
+      service:
+         name: rsyslog
+         state: restarted
+    - name: Restart audit
+      service:
+         name: auditd
+         state: restarted
+
+...
