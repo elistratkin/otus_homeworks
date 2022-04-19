@@ -24,6 +24,6 @@
 23. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Настраиваем split-dns</a>
 24. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Строим бонды и вланы</a>
 25. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">LDAP</a>
-26. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Развертывание веб приложения</a>
+26. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/26_Web_APP">Развертывание веб приложения</a>
 27. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Репликация mysql</a>
 28. <a href="https://github.com/elistratkin/otus_homeworks/tree/main/ALP/">Репликация postgres</a>
